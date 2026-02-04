@@ -1,0 +1,81 @@
+Java Collection Framework (JCF) is a set of classes and interfaces that provide ready-made data structures to store and manipulate groups of objects efficiently.
+
+-Java provides collection interfaces like List, Set, Map, and Queue, with ready-made classes such as ArrayList, HashSet, HashMap, and PriorityQueue, so you don’t have to write data-handling code from scratch.
+
+-The Collection Framework improves productivity by making code more reusable, maintainable and faster to develop.
+
+FEATURES OF JAVA COLLECTION FRAMEWORK
+1. Provides ready-to-use data structures (e.g., ArrayList, HashSet, HashMap).9
+2. Offers interfaces (Collection, List, Set, Map, Queue) to define standard behaviors.
+3. Supports dynamic resizing, unlike arrays with a fixed size.
+4. Includes algorithms (sorting, searching, iteration) via the Collections utility class.
+5. Improves code reusability and performance by reducing boilerplate code.
+
+
+1.Core Interfaces
+The foundation of the Collections Framework is built on interfaces like Collection, List, Set, Queue, Deque and Map.They define the behavior of different collection types and serve as a blueprint for implementations.
+
+-Collection Interface
+-List Interface
+-Set Interface
+-Queue Interface
+-Deque Interface
+-Map Interface
+
+2. List Implementations
+Lists represent ordered collections that allow duplicate elements and positional access. They include dynamic arrays, linked structures and legacy classes designed for sequential storage.
+
+-ArrayList
+-LinkedList
+-Vector
+-Stack
+-AbstractList
+-AbstractSequentialList
+
+3. Set Implementations
+Sets represent collections of unique elements, disallowing duplicates. They provide implementations with different ordering strategies like hashing, insertion order or sorting.
+
+-HashSet
+-Linked HashSet
+-TreeSet
+-EnumSet
+-SortedSet Interface
+-NavigableSet
+-ConcurrentSkipListSet
+
+4. Queue / Deque Implementations
+Queues store elements in a FIFO manner, while Deques allow operations at both ends. They are used for scheduling, buffering and producer-consumer applications.
+
+-Priority Queue
+-Array Deque
+-BlockingQueue
+-ConcurrentLinked Queue
+-Abstract Queue
+
+5. Map Implementations
+Maps store data as key-value pairs where keys are unique. Different implementations provide hashing, ordering, reference-based and concurrent behaviors.
+
+-HashMap
+-LinkedHashMap
+-TreeMap
+-WeakHashMap
+-IdentityHashMap
+-HashTable
+
+6. Utility and Supporting Classes
+Java provides helper classes and interfaces to enhance collection usage. They include Collections, Iterator, Comparator and other tools for iteration and sorting.
+
+-Collections Class
+-Iterable interface
+-ListIterator
+-Enumeration
+-Comparator
+-Comparable
+
+7. Concurrency Collections
+Concurrent collections are designed for multi-threaded environments. They ensure thread-safe access without compromising performance.
+
+-ConcurrentHashMap
+-CopyOnWriteArrayList
+-ConcurrentLinkedQueue
+-BlockingQueue (ArrayBlockingQueue, LinkedBlockingQueue )

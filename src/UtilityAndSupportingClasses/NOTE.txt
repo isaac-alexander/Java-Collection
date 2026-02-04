@@ -1,0 +1,9 @@
+Utility and Supporting Classes
+Java provides helper classes and interfaces to enhance collection usage. They include Collections, Iterator, Comparator and other tools for iteration and sorting.
+
+-Collections Class
+-Iterable interface
+-ListIterator
+-Enumeration
+-Comparator
+-Comparable

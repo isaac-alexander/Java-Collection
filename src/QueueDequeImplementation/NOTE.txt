@@ -1,0 +1,8 @@
+Queue / Deque Implementations
+Queues store elements in a FIFO manner, while Deque allow operations at both ends. They are used for scheduling, buffering and producer-consumer applications.
+
+-Priority Queue
+-Array Deque
+-BlockingQueue
+-ConcurrentLinked Queue
+-Abstract Queue

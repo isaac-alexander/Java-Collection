@@ -1,0 +1,19 @@
+The Collection interface is the root of the Java Collections Framework, defined in the java.util package. It represents a group of individual objects as a single unit and provides basic operations for working with them.
+
+-Dynamic in Nature: Collections can automatically grow or shrink in size, unlike arrays that have a fixed length.
+
+-Stores Homogeneous and Heterogeneous Objects: Can hold same-type or different-type elements based on implementation.
+
+-Easy to Use: Provides convenient methods such as add(), remove(), and clear() to manage elements effortlessly.
+
+-Efficient Traversal: Allows easy access and processing of elements using loops or iterators.
+
+Collection Interface Declaration
+public interface Collection<E> extends Iterable<E>
+
+Here, E represents the type of elements stored in the collection.
+
+Object Creation of Collection Interface
+Collection<String> fruits = new ArrayList<>();
+
+In Java, we cannot create an object of an interface directly. Instead, we create an object of the ArrayList class that implements the interface and assign it to the interface reference.

@@ -1,0 +1,9 @@
+Core Interfaces
+The foundation of the Collections Framework is built on interfaces like Collection, List, Set, Queue, Deque and Map.They define the behavior of different collection types and serve as a blueprint for implementations.
+
+-Collection Interface
+-List Interface
+-Set Interface
+-Queue Interface
+-Deque Interface
+-Map Interface

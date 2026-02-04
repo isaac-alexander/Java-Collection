@@ -1,0 +1,7 @@
+Concurrency Collections
+Concurrent collections are designed for multi-threaded environments. They ensure thread-safe access without compromising performance.
+
+-ConcurrentHashMap
+-CopyOnWriteArrayList
+-ConcurrentLinkedQueue
+-BlockingQueue (ArrayBlockingQueue, LinkedBlockingQueue )

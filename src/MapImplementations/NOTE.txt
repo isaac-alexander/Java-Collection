@@ -1,0 +1,9 @@
+Map Implementations
+Maps store data as key-value pairs where keys are unique. Different implementations provide hashing, ordering, reference-based and concurrent behaviors.
+
+-HashMap
+-LinkedHashMap
+-TreeMap
+-WeakHashMap
+-IdentityHashMap
+-HashTable

@@ -1,0 +1,10 @@
+Set Implementations
+Sets represent collections of unique elements, disallowing duplicates. They provide implementations with different ordering strategies like hashing, insertion order or sorting.
+
+-HashSet
+-Linked HashSet
+-TreeSet
+-EnumSet
+-SortedSet Interface
+-NavigableSet
+-ConcurrentSkipListSet
