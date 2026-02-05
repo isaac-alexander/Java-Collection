@@ -17,3 +17,44 @@ Object Creation of Collection Interface
 Collection<String> fruits = new ArrayList<>();
 
 In Java, we cannot create an object of an interface directly. Instead, we create an object of the ArrayList class that implements the interface and assign it to the interface reference.
+
+Sub-Interfaces of Collection Interface
+The subinterfaces of Collection, also called collection types, are:
+
+1. List:
+-List represents an ordered collection that allows duplicates.
+-Elements can be accessed by index.
+-Implementing Classes: ArrayList, LinkedList, Vector, Stack.
+-Declaration:
+    public interface List<E> extends Collection<E>
+
+2. Set:
+S-et represents an unordered collection with no duplicate elements.
+-Implementing Classes: HashSet, TreeSet, LinkedHashSet, EnumSet, CopyOnWriteArraySet.
+-Declaration:
+    public interface Set<E> extends Collection<E>
+
+3. SortedSet:
+-SortedSet extends Set and maintains elements in a sorted order.
+-Provides methods to handle range-based operations.
+-Implementing Class: TreeSet.
+-Declaration:
+    public interface SortedSet<E> extends Set<E>
+
+4. NavigableSet:
+-NavigableSet extends SortedSet and provides navigation methods like lower(), floor(), ceiling(), and higher().
+-Implementing Class: TreeSet.
+-Declaration:
+    public interface NavigableSet<E> extends SortedSet<E>
+
+5. Queue:
+-Queue represents a collection following FIFO (First-In-First-Out) order.
+-Implementing Classes: PriorityQueue, Deque, ArrayDeque, LinkedList
+-Declaration:
+    public interface Queue<E> extends Collection<E>
+
+6. Deque:
+-Deque extends Queue and allows elements to be added/removed from both ends.
+-Implementing Classes: ArrayDeque, LinkedList.
+-Declaration:
+    public interface Deque<E> extends Queue<E>

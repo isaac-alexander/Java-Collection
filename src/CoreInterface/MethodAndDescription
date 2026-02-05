@@ -1,0 +1,20 @@
+Method              Description
+
+1. add(E e)    -   Adds an element to the collection (optional).
+2. addAll(Collection<? extends E> c) - Adds all elements from another collection.
+3. clear() -   Removes all elements.
+4. contains(Object o)   -   Checks if an element exists.
+5. containsAll(Collection<?> c) -   Checks if all elements exist.
+6. remove(Object o) -   Removes a single instance of the specified element.
+7. removeAll(Collection<?> c)   -   Removes all elements present in another collection.
+8. retainAll(Collection<?> c)   -   Retains only elements present in another collection.
+9. removeIf(Predicate<? super E> filter)    -   Removes elements satisfying a predicate.
+10. size()  -   Returns the number of elements.
+11. isEmpty()   -   Checks if the collection is empty.
+12. iterator()  -   Returns an iterator over the elements.
+13. stream()    -   Returns a sequential stream.
+14. parallelStream()    -   Returns a parallel stream.
+15. toArray()   -   Converts the collection to an array.
+16. equals(Object o)    -   Compares this collection with another object.
+17. hashCode()  -   Returns hash code of the collection.
+18. spliterator()   -   Returns a Spliterator for elements.
