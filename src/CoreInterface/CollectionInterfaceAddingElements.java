@@ -3,7 +3,7 @@ package CoreInterface;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class AddingElements {
+public class CollectionInterfaceAddingElements {
     static void main(String[] args) {
 
         // Creating a collection using ArrayList implementation

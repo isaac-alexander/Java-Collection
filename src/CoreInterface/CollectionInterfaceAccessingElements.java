@@ -1,7 +1,7 @@
 package CoreInterface;
 import java.util.*;
 
-public class AccessingElements {
+public class CollectionInterfaceAccessingElements {
     static void main(String[] args) {
 
         // Using List reference for index-based access

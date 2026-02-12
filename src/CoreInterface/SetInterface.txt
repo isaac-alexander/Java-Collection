@@ -1,0 +1,41 @@
+In Java, the Set interface is a part of the Java Collection Framework, located in the java.util package. It represents a collection of unique elements, meaning it does not allow duplicate values.
+
+The set interface does not allow duplicate elements.
+It can contain at most one null value except TreeSet implementation which does not allow null.
+The set interface provides efficient search, insertion, and deletion operations.
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Geeks {
+
+  	public static void main(String args[])
+    {
+        // Create a Set using HashSet
+        Set<String> s = new HashSet<>();
+
+        // Displaying the Set
+        System.out.println("Set Elements: " + s);
+    }
+}
+
+Explanation: In the above example, HashSet will appear as an empty set, as no elements were added. The order of elements in HashSet is not guaranteed, so the elements will be displayed in a random order if any are added.
+
+Classes that implement the Set interface
+
+-HashSet: A set that stores unique elements without any specific order, using a hash table and allows one null element.
+
+-EnumSet : A high-performance set designed specifically for enum types, where all elements must belong to the same enum.
+
+-LinkedHashSet: A set that maintains the order of insertion while storing unique elements.
+
+-TreeSet: A set that stores unique elements in sorted order, either by natural ordering or a specified comparator.
+
+
+Declaration of Set Interface
+The declaration of Set interface is listed below:
+
+public interface Set extends Collection
+
+Creating Set Objects
+Since Set is an interface, objects cannot be created of the typeset. We always need a class that implements this interface in order to create an object. And also, after the introduction of Generics in Java 1.5, it is possible to restrict the type of object that can be stored in the Set. This type-safe set can be defined as:
