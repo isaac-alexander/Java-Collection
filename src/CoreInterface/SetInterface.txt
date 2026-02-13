@@ -39,3 +39,34 @@ public interface Set extends Collection
 
 Creating Set Objects
 Since Set is an interface, objects cannot be created of the typeset. We always need a class that implements this interface in order to create an object. And also, after the introduction of Generics in Java 1.5, it is possible to restrict the type of object that can be stored in the Set. This type-safe set can be defined as:
+
+Methods of Set Interface
+
+
+    Method	                Description
+
+add(element)    -   Adds element if not already present. Returns true if added.
+
+addAll(collection)  -   Adds all elements from the given collection.
+
+clear() -   Removes all elements from the set.
+
+contains(element)   -	Checks if the set contains the specified element.
+
+containsAll(collection) -   Checks if the set contains all elements from the given collection.
+
+hashCode()  -   Returns the hash code of the set.
+
+isEmpty()   -   This method is used to check whether the set is empty or not.
+
+iterator()  -   This method is used to return the iterator of the set.
+
+remove(element) -   Removes the specified element from the set.
+
+removeAll(collection)   -   Removes all elements in the given collection from the set.
+
+retainAll(collection)   -   Retains only elements present in the given collection.
+
+size()  -   Returns the number of elements in the set.
+
+toArray()   -   This method is used to form an array of the same elements as that of the Set.

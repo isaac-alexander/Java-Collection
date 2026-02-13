@@ -2,7 +2,7 @@ package CoreInterface;
 
 import java.util.*;
 
-public class RemovingElements {
+public class CollectionInterfaceRemovingElements {
     static void main(String[] args) {
 
         Collection<String> fruits = new ArrayList<>();
