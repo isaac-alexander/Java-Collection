@@ -1,0 +1,79 @@
+The Deque interface is part of the java.util package and extends the Queue interface. It stands for Double-Ended Queue and represents a linear collection that allows insertion, removal, and retrieval of elements from both ends.
+
+Flexible Data Structure: Can be used as a stack (LIFO) or a queue (FIFO).
+Deque allows null depending on implementation, but most throw NullPointerException (ArrayDeque, ConcurrentLinkedDeque).
+Resizable Implementations: Implementations like ArrayDeque grow dynamically as needed.
+Thread Safety: Most implementations are not thread-safe; synchronization is required for concurrent use.
+Declaration of Deque
+public interface Deque<E> extends Queue<E>
+
+Here, E is the type of elements stored in the deque.
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Geeks
+{
+    public static void main(String[] args)
+    {
+
+        // Create a Deque of Strings
+        Deque<String> d = new ArrayDeque<>();
+
+        d.addFirst("1");
+        d.addLast("2");
+
+        String f = d.removeFirst();
+        String l = d.removeLast();
+
+        // Displaying the Deque
+        System.out.println("First: " + f + ", Last: " + l);
+    }
+}
+
+Common Implementations classes
+
+-ArrayDeque: Resizable array implementation; fast for insertion/removal at both ends; not thread-safe.
+
+-LinkedList: Doubly-linked list; supports all deque operations; allows nulls.
+
+-ConcurrentLinkedDeque: Thread-safe deque based on linked nodes; suitable for concurrent use.
+
+Methods of Deque Interface
+
+Method	            Description
+
+addFirst(E e)   -   Inserts element at the front (head).
+
+addLast(E e)    -   Inserts element at the end (tail).
+
+offerFirst(E e) -   Adds element at head; returns false if unable.
+
+offerLast(E e)  -   Adds element at tail; returns false if unable.
+
+add(E e)    -   Adds element at the tail.
+
+offer(E e)  -   Adds element at the tail.
+
+removeFirst()   -   Removes and returns first element; throws exception if empty.
+
+removeLast()    -   Removes and returns last element; throws exception if empty.
+
+pollFirst() -   Removes and returns first element; returns null if empty.
+
+pollLast()  -   Removes and returns last element; returns null if empty.
+
+poll()  -   Removes and returns head safely; returns null if empty.
+
+getFirst()  -   Retrieves first element without removing; throws exception if empty.
+
+getLast()   -   Retrieves last element without removing; throws exception if empty.
+
+peekFirst() -   Retrieves first element safely; returns null if empty.
+
+peekLast()  -   Retrieves last element safely; returns null if empty.
+
+peek()  -   Retrieves head element safely; returns null if empty.
+
+push(E e)   -   Inserts element at the head (top of stack).
+
