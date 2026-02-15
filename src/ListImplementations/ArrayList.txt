@@ -1,0 +1,48 @@
+ArrayList in Java is a resizable array provided in the java.util package. Unlike normal arrays, its size can grow or shrink dynamically as elements are added or removed.
+
+-Elements can be accessed using their index, just like arrays.
+
+-Duplicate elements are allowed.
+
+-Elements are stored in the order they are inserted.
+
+-ArrayList is not thread-safe. To make it thread-safe, you must wrap it manually using Collections.synchronizedList().
+
+import java.util.ArrayList;
+
+class Main {
+    public static void main (String[] args) {
+
+      	// Creating an ArrayList
+      	ArrayList<Integer> a = new ArrayList<Integer>();
+
+      	// Adding Element in ArrayList
+      	a.add(1);
+      	a.add(2);
+      	a.add(3);
+
+      	// Printing ArrayList
+      	System.out.println(a);
+    }
+}
+
+ArrayList Constructors in Java
+Java provides multiple constructors to create an ArrayList based on different requirements:
+
+1. ArrayList()
+Creates an empty ArrayList with default initial capacity.
+
+ArrayList<Integer> arr = new ArrayList<>();
+
+2. ArrayList(Collection<? extends E> c)
+Creates an ArrayList initialized with elements from the specified collection.
+
+ArrayList<String> arr = new ArrayList<>(collection);
+
+3. ArrayList(int initialCapacity)
+This constructor is used to build an array list with the initial capacity being specified.
+
+ArrayList<Double> arr = new ArrayList<>(20);
+
+Operations of ArrayList
+Now, Using the constructors we have got ArrayList for further operations like Insertion,Deletion and Updation of the elements in ArrayList.
