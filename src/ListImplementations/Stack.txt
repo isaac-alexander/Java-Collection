@@ -1,0 +1,162 @@
+Stack is a linear data structure that follows the Last In First Out (LIFO) principle and is defined in the java.util package. Internally, it extends the Vector class.
+
+-Stack class maintains insertion order and allows duplicates and null values.
+
+-Grows dynamically when its capacity is exceeded.
+
+-All the methods of Stack are synchronized. It is thread-safe.
+
+-Stack is considered a legacy class, introduced in early versions of Java and a preferred solution to implement Stack Data Structure (especially when thread synchronization is not needed) is either to use ArrayDeque or LinkedList
+
+-Stack class implements List, RandomAccess, Cloneable, and Serializable interfaces.
+
+import java.util.Stack;
+
+public class Geeks {
+    public static void main(String[] args)
+    {
+        // Create a new stack
+        Stack<Integer> s = new Stack<>();
+
+        // Push elements onto the stack
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        s.push(4);
+
+        // Pop elements from the stack
+        while (!s.isEmpty()) {
+            System.out.println(s.pop());
+        }
+    }
+}
+
+Explanation:
+
+-Elements are added to the stack using the push() method, placing each item on top.
+
+-A loop runs while the stack is not empty, checked using the empty() method.
+
+-Elements are removed and printed using the pop() method in LIFO order.
+
+Constructors of Stack in Java
+In order to create a Stack, we need to create an object of the Stack class. The Stack class inherits constructors from the Vector class.
+
+1. Stack()
+This constructor is used to create an empty stack.
+
+Stack<Integer> stack = new Stack<>()
+
+2. Stack(int initialCapacity)
+This constructor is used to create a stack with a specified initial capacity.
+
+Stack<Integer> stack = new Stack<>(20);
+
+Methods in Stack Class
+
+Method          Description
+
+empty() -   This method returns true if nothing is on the top of the stack. Else, returns false.
+
+peek()  -   This method returns the element on the top of the stack, but does not remove it.
+
+pop()   -   This method removes and returns the top element of the stack.
+
+push(Object element)    -   This method pushes an element on the top of the stack.
+
+search(Object element)  -   This method is used to determine whether an object exists in the stack. If the element is found,It returns the position of the element from the top of the stack. Else, it returns -1.
+
+Methods Inherited from the Vector Class
+
+Method          Description
+
+add(Object obj)	-   This method is used to appends the specified element to the end of the Vector.
+
+add(int index, Object obj)	   -    This method is used to inserts the specified element at the specified position in the Vector.
+
+addAll(Collection c)	    -   This method is used to appends all of the elements in the specified Collection to the end of theVector, in the order that they are returned by the specified Collection's Iterator.
+
+addAll(int index, Collection c) -	This method is used to inserts all the elements in the specified Collection into this Vector at the specified position.
+
+addElement(Object o)	-   This method is used to adds the specified component to the end of the vector
+
+capacity()	-   This method returns the current capacity of the vector.
+
+clear()	-   This method removes all the elements from the Vector.
+
+clone()	-   This method returns a clone of the vector.
+
+contains(Object o)	-   This method returns true if this vector contains the specified element.
+
+containsAll(Collection c)	-   This method returns true if this Vector contains all the elements in the specified Collection.
+
+copyInto(Object []array)	-   This method is used to copies the components of this vector into the specified array.
+
+elementAt(int index)	-   This method returns the component at the specified index.
+
+elements()	-   This method returns an enumeration of the components of the vector.
+
+ensureCapacity(int minCapacity) -   This method increases the capacity of the vector, if necessary, to ensure that it can hold at least the number of components specified by the minimum capacity argument.
+
+equals()	-   This method compares the specified Object with the Vector for equality.
+
+firstElement()	-   This method returns the first component (the item at index 0) of the vector.
+
+get(int index)	-   This method returns the element at the specified position in the Vector.
+
+hashCode()	-   This method returns the hash code value for the Vector.
+
+indexOf(Object o)	-   This method returns the index of the first occurrence of the specified element in this vector or -1 if this vector does not contain the element.
+
+indexOf(Object o, int index)	-   This method returns the index of the first occurrence of the specified element in this vector, searching forwards from the index or returns -1 if the element is not found.
+
+insertElementAt(Object o, int index)    -	This method inserts the specified object as a component in this vector at the specified index.
+
+isEmpty()	-   This method tests if this vector has no components.
+
+iterator()	-   This method returns an iterator over the elements in this list in proper sequence.
+
+lastElement()	   -    This method returns the last component of the vector.
+
+lastIndexOf(Object o)	-   This method returns the index of the last occurrence of the specified element in this vector or -1 If this vector does not contain the element.
+
+lastIndexOf(Object o, int index)	-   This method returns the index of the last occurrence of the specified element in this vector, searching backward from the index or returns -1 if the element is not found.
+
+listIterator()	-   This method returns a list iterator over the elements in this list (in proper sequence).
+
+listIterator(int index)	-   This method returns a list iterator over the elements in this list (in proper sequence), starting at the specified position in the list.
+
+remove(int index)	-   This method removes the element at the specified position in this Vector.
+
+remove(Object o)	-   This method removes the first occurrence of the specified element in this Vector If the Vector does not contain the element, it is unchanged.
+
+removeAll(Collection c)	-   This method removes from this Vector all of its elements that are contained in the specified Collection.
+
+removeAllElements()	-   This method removes all components from this vector and sets its size to zero.
+
+removeElement(Object o)	-   This method removes the first (lowest-indexed) occurrence of the argument from this vector.
+
+removeElementAt(int index)	-   This method deletes the component at the specified index.
+
+
+removeRange(int fromIndex, int toIndex)	-   This method removes from this list all the elements whose index is between fromIndex, inclusive, and toIndex, exclusive.
+
+retainAll(Collection c)	-   This method retains only the elements in this Vector that are contained in the specified Collection.
+
+set(int index, Object o)	-   This method replaces the element at the specified position in this Vector with the specified element.
+
+setElementAt(Object o, int index)	-   This method sets the component at the specified index of this vector to be the specified object.
+
+setSize(int newSize)	-   This method sets the size of this vector.
+
+size()	-   This method returns the number of components in this vector.
+
+subList(int fromIndex, int toIndex)	-   This method returns a view of the portion of this List between fromIndex, inclusive, and toIndex, exclusive.
+
+toArray()	-   This method returns an array containing all of the elements in this Vector in the correct order.
+
+toArray(Object []array)	-   This method returns an array containing all of the elements in this Vector in the correct order; the runtime type of the returned array is that of the specified array.
+
+toString()	-   This method returns a string representation of this Vector, containing the String representation of each element.
+
+trimToSize()	-   This method trims the capacity of this vector to be the vector's current size.
