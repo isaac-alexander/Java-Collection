@@ -1,0 +1,27 @@
+METHOD              DESCRIPTION
+
+addAll(Collection<? extends E> c)	-   Appends all of the elements in the specified collection to the end of this list, in the order that they are returned by the specified collection's iterator (optional operation).
+
+contains(Object o)	-   Returns true if this list contains the specified element.
+
+containsAll(Collection<?> c)	-   Returns true if this list contains all of the elements of the specified collection.
+
+isEmpty()	-   Returns true if this list contains no elements.
+
+remove(int index)	-   Removes the element at the specified position in this list (optional operation).
+
+removeAll(Collection<?> c)	-   Removes from this list all of its elements that are contained in the specified collection (optional operation).
+
+replaceAll(UnaryOperator<E> operator)	-   Replaces each element of this list with the result of applying the operator to that element.
+
+retainAll(Collection<?> c)	-   Retains only the elements in this list that are contained in the specified collection (optional operation).
+
+size()	-   Returns the number of elements in this list.
+
+sort(Comparator<? super E> c)	-   Sorts this list according to the order induced by the specified Comparator.
+
+spliterator()	-   Creates a Spliterator over the elements in this list.
+
+toArray()	-   Returns an array containing all of the elements in this list in proper sequence (from first to last element).
+
+toArray(T[] a)	-   Returns an array containing all of the elements in this list in proper sequence (from first to last element) ; the runtime type of the returned array is that of the specified array.

@@ -1,0 +1,34 @@
+Methods in AbstractList
+METHOD      DESCRIPTION
+
+add(int index, E element)	-   Inserts the specified element at the specified position in this list (optional operation).
+
+add(E e)	-   Appends the specified element to the end of this list (optional operation).
+
+addAll(int index,Collection<? extends E> c) -   Inserts all of the elements in the specified collection into this list at the specified position (optional operation).
+
+clear()	-   Removes all of the elements from this list (optional operation).
+
+equals(Object o)    -	Compares the specified object with this list for equality.
+
+get(int index)	-   Returns the element at the specified position in this list.
+
+hashCode()	-   Returns the hash code value for this list.
+
+indexOf(Object o)	-   Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element.
+
+iterator()  -	Returns an iterator over the elements in this list in proper sequence.
+
+lastIndexOf(Object o)   -	Returns the index of the last occurrence of the specified element in this list, or -1 if this list does not contain the element.
+
+listIterator()	-   Returns a list iterator over the elements in this list (in proper sequence).
+listIterator(int index)	-   Returns a list iterator over the elements in this list (in proper sequence), starting at the specified position in the list.
+
+remove(int index)	-   Removes the element at the specified position in this list (optional operation).
+
+removeRange(int fromIndex, int toIndex)	-   Removes from this list all of the elements whose index is between fromIndex, inclusive, and toIndex, exclusive.
+
+set(int index, E element)	-   Replaces the element at the specified position in this list with the specified element (optional operation).
+
+subList(int fromIndex, int toIndex)	-   Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive.
+

@@ -1,0 +1,18 @@
+The AbstractList class in Java is a part of the Java Collection Framework and implements the Collection interface and the AbstractCollection class. AbstractList class provides a skeletal implementation of the List interface to minimize the effort required to implement this interface backed by a Random Access data store.
+
+For sequential access data (such as a linked list), AbstractSequentialList should be used in preference to this class.
+
+To implement an unmodifiable list, for which one needs to only extend this AbstractList Class and implement the get(int) and the size() methods.
+
+To implement a modifiable list, for which one additionally override the set​(int index, E element) method (which otherwise throws an UnsupportedOperationException).
+
+If the list is variable-size, for which one should override the add(int, E) and remove(int) methods.
+
+Declaration of AbstractList
+public abstract class AbstractList<E> extends AbstractCollection<E> implements List<E>
+
+where E is the type of elements maintained by this collection.
+
+Constructor: protected AbstractList() - The default constructor, but being protected, it doesn't allow to create an AbstractList object.
+
+AbstractList<E> al = new ArrayList<E>();
