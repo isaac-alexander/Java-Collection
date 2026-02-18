@@ -1,0 +1,37 @@
+Methods of HashSet
+
+Method      -       Description
+
+add(E e) - Used to add the specified element if it is not present, if it is present then return false.
+
+clear() - Used to remove all the elements from the set.
+
+contains(Object o) - Used to return true if an element is present in a set.
+
+remove(Object o) - Used to remove the element if it is present in set.
+
+iterator() - Used to return an iterator over the element in the set.
+
+isEmpty() - Used to check whether the set is empty or not. Returns true for empty and false for a non-empty condition for set.
+
+size() - Used to return the size of the set.
+
+clone() - Used to create a shallow copy of the set.
+
+
+Differences between HashSet and HashMap.
+Basis       -   HashSet     -   HashMap
+
+Implementation - HashSet implements a Set interface. - HashMap implements a Map interface.
+
+Duplicates - HashSet doesn't allow duplicate values. - HashMap stores key-value pairs and doesn’t allow duplicate keys. A duplicate key replaces the old value.
+
+Number of objects during storing objects - HashSet requires only one object add(Object o). - HashMap requires two objects put(K key, V Value) to add an element to the HashMap object.
+
+Dummy value - HashSet internally uses a HashMap, where each element added is stored as a key with a dummy value. - HashMap does not have any concept of dummy value.
+
+Storing or Adding a mechanism - HashSet internally uses the HashMap object to store or add the objects. - HashMap internally uses hashing to store or add objects
+
+Faster - HashSet is slower than HashMap. - HashMap is faster than HashSet.
+
+Insertion - HashSet uses the add() method for adding or storing data. - HashMap uses the put() method for storing data.

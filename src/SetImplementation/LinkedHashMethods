@@ -1,0 +1,38 @@
+Methods of LinkedHashSet
+Method      -   Description
+
+add(E e)	-   Adds an element if it’s not already present.
+
+addAll(Collection c)	-   Adds all elements from the specified collection.
+
+clear()	-   Removes all elements from the set.
+
+contains(Object o)	-   Checks if the set contains the specified element.
+
+containsAll(Collection c)	-   Checks if the set contains all elements from the given collection.
+
+remove(Object o)	-   Removes the specified element from the set.
+
+removeAll(Collection c)	-   Removes all matching elements from the set.
+
+retainAll(Collection c)	-   Keeps only elements present in the given collection.
+
+isEmpty()	-   Checks if the set is empty.
+
+size()	-   Returns the number of elements in the set.
+
+iterator()	-   Returns an iterator over the elements.
+
+toArray()	-   Returns an array containing all elements.
+
+toArray(T[] a)	-   Returns an array of the specified type containing all elements.
+
+hashCode()	-   Returns hash code of the set.
+
+equals(Object o)	-   Compares this set with another set.
+
+clone()	-   Creates a shallow copy of the set.
+
+toString()	-   Returns a string representation of the set.
+
+spliterator()	-   Returns a Spliterator for this set.

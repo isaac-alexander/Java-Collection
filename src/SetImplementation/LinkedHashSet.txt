@@ -1,0 +1,43 @@
+inkedHashSet in Java implements the Set interface of the Collections Framework.
+
+-It combines the functionalities of a HashSet with a doubly-linked list to maintain the insertion order of elements.
+
+-LinkedHashSet stores unique elements only and allows a single null.
+
+-Implements Set, Cloneable and Serializable interfaces.
+
+import java.util.LinkedHashSet;
+
+public class Geeks {
+    public static void main(String[] args) {
+
+        // Create a LinkedHashSet of Strings
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Cherry");
+        set.add("Apple");
+        System.out.println("" + set);
+    }
+}
+
+Constructors of LinkedHashSet
+1. LinkedHashSet()
+This constructor is used to create an empty LinkedHashSet with the default capacity i.e. 16 and load factor 0.75.
+
+LinkedHashSet<E> hs = new LinkedHashSet<E>();
+
+2. LinkedHashSet(Collection C)
+Used in initializing the LinkedHashSet with the elements of the collection C.
+
+LinkedHashSet<E> hs = new LinkedHashSet<E>(Collection c);
+
+3. LinkedHashSet(int initialCapacity)
+Used to initialize the size of the LinkedHashSet with the integer mentioned in the parameter.
+
+LinkedHashSet<E> hs = new LinkedHashSet<E>((int initialCapacity);
+
+4. LinkedHashSet(int capacity, float fillRatio)
+Creates an empty LinkedHashSet with specified capacity and load factor.
+
+LinkedHashSet<E> hs = new LinkedHashSet<E>(int capacity, float loadFactor);

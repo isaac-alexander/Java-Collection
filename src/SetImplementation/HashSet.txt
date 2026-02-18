@@ -1,0 +1,64 @@
+HashSet in Java implements the Set interface of the Collections Framework. It is used to store the unique elements, and it doesn't maintain any specific order of elements.
+
+-HashSet does not allow duplicate elements.
+
+-Uses HashMap internally which is an implementation of hash table data structure.
+
+-Also implements Serializable and Cloneable interfaces.
+
+-HashSet is not thread-safe. To make it thread-safe, synchronization is needed externally.
+
+import java.util.*;
+
+class GFG
+{
+    public static void main(String[] args)
+    {
+        // Instantiate an object of HashSet
+        HashSet<Integer> hs = new HashSet<>();
+
+      	// Adding elements
+        hs.add(1);
+        hs.add(2);
+        hs.add(1);
+
+        System.out.println("HashSet Size: " + hs.size());
+        System.out.println("Elements in HashSet: " + hs);
+    }
+}
+
+
+Capacity of HashSet
+Capacity refers to the number of buckets in the hash table. The default capacity of a HashSet is 16 and the load factor is 0.75.
+
+When the number of elements exceeds the capacity automatically increases (resizes) to maintain performance.
+
+new capacity = old capacity × 2
+
+Load Factor
+Load Factor is a measure that controls how full the HashSet can get before resizing. Default Load Factor = 0.75. If the number of elements exceeds the threshold, the capacity is doubled.
+
+Threshold = capacity × load factor
+
+Constructors of HashSet class
+To create a HashSet, we need to create an object of the HashSet class. The HashSet class consists of various constructors that allow the possible creation of the HashSet. The following are the constructors available in this class.
+
+1. HashSet()
+Creates a new empty HashSet with default capacity (16) and load factor (0.75).
+
+ HashSet<String> set = new HashSet<>();
+
+2. HashSet(int initialCapacity)
+Creates an empty HashSet with the specified initial capacity and default load factor (0.75).
+
+ HashSet<Type> set = new HashSet<>(int initialCapacity);
+
+3. HashSet(int initialCapacity, float loadFactor)
+Creates an empty HashSet with the given initial capacity and load factor.
+
+HashSet<Type> set = new HashSet<>(int initialCapacity, float loadFactor);
+
+4. HashSet(Collection<? extends E> c)
+Creates a new HashSet containing the elements of the specified collection (removes duplicates automatically).
+
+HashSet<Type> set = new HashSet<>(c);
