@@ -1,0 +1,9 @@
+Methods     -       Description
+
+EnumSet.allOf(Class<E> elementType) -   Creates an EnumSet containing all the enum constants of the specified enum type
+
+EnumSet.noneOf(Class<E> elementType)    -   Creates an empty EnumSet
+
+EnumSet.range(E from, E to) -   Creates an EnumSet containing the elements from from to to (inclusive)
+
+EnumSet.of(E..... elements )    -   Creates an EnumSet containing the specified enum constants.

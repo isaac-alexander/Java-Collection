@@ -1,0 +1,48 @@
+In Java, the EnumSet is a specialized set implementation for use with enum types. It is a part of java.util package and provides a highly optimized set for storing enum constants. The EnumSet is one of the specialized implementations of the Set interface for use with the enumeration type.
+
+-It extends the AbstractSet class and implements the Set Interface in Java.
+
+-The EnumSet class is a member of the Java Collections Framework and is not synchronized.
+
+-It’s a high-performance set implementation, much faster than HashSet.
+
+-All of the elements in an EnumSet must come from a single enumeration type that is specified when the set is created either explicitly or implicitly.
+
+-It does not allow null Objects and throws NullPointerException if we do so.
+
+-It uses a fail-safe iterator, so it won’t throw ConcurrentModificationException if the collection is modified while iterating.
+
+Example: This example demonstrates how to create an EnumSet and print its elements
+// Creating an EnumSet
+import java.util.EnumSet;
+
+enum Student { Geek1, Geek2, Geek3, Geek4, Geek5 }
+
+public class Geeks {
+    public static void main(String[] args) {
+
+        // Create an EnumSet containing specific elements
+        EnumSet<Student> e = EnumSet.of(Student.Geek1, Student.Geek2, Student.Geek3);
+
+        System.out.println("EnumSet: " + e);
+    }
+}
+
+OUTPUT: EnumSet: [Geek1, Geek2, Geek3]
+
+Declaration of EnumSet
+In Java, the declaration of EnumSet can be done as:
+
+EnumSet<Type> name = EnumSet.of(Element1, Element2, Element3);
+
+Parameter: EnumSet.of() take one or more enum constants as arguments and specifying which enum values to include in the set.
+Return Type: It returns a set containing the specified enum constants
+
+Creating a EnumSet
+In Java, EnumSet is an abstract class, we can not directly create an instance of it. Instead it provides static factory methods to create instances. There are two different internal implementations of EnumSet which are listed below:
+
+RegularEnumSet: It uses a single long object to store the elements of the EnumSet. Each bit in the long value represents an enum constant. The size of a long is 64 bits, RegularEnumSet can store up to 64 enum values.
+
+JumboEnumSet: It uses an array of long values to store the elements of the EnumSet. The key difference is that JumboEnumSet allows atoring more than 63 values by using multiple long elements to represent a larger set of enum constants.
+
+Note: These are package-private and backed by a bit vector.

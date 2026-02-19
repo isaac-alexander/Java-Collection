@@ -1,0 +1,27 @@
+Method      -       Action Performed
+
+allOf(Class<E> elementType)   - 	Creates an enum set containing all of the elements in the specified element type.
+
+clone()   -	Returns a copy of this set.
+
+complementOf(EnumSet<E> s)   -	Creates an enum set with the same element type as the specified enum set, initially containing all the elements of this type that are not contained in the specified set.
+
+copyOf(Collection<E> c)   -	Creates an enum set initialized from the specified collection.
+
+copyOf(EnumSet<E> s)   -	Creates an enum set with the same element type as the specified enum set, initially containing the same elements (if any).
+
+noneOf(Class<E> elementType)   -	Creates an empty enum set with the specified element type.
+
+of(E e)   -	Creates an enum set initially containing the specified element.
+
+of(E e1, E e2)   -	Creates an enum set initially containing the specified elements.
+
+of(E first, E… rest)   -	Creates an enum set initially containing the specified elements.
+
+of(E e1, E e2, E e3)   -	Creates an enum set initially containing the specified elements.
+
+of(E e1, E e2, E e3, E e4)   -	Creates an enum set initially containing the specified elements.
+
+of(E e1, E e2, E e3, E e4, E e5)   -	Creates an enum set initially containing the specified elements.
+
+range(E from, E to)   -	Creates an enum set initially containing all of the elements in the range defined by the two specified endpoints.
