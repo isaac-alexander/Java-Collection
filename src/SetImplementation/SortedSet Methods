@@ -1,0 +1,39 @@
+Methods of SortedSet Interface
+
+Method      -   	Description
+
+add(element)	-	Adds an element if not already present.
+
+addAll(collection)	-	Adds all elements from another collection.
+
+clear()	-	Removes all elements (set remains empty).
+
+comparator()	-	This method returns the comparator used to order the elements in this set.
+
+contains(element)	-	This method is used to check whether a specific element is present in the Set or not.
+
+containsAll(collection)	-	Checks if all elements of a collection are in the set.
+
+first()	-	This method returns the first(lowest) element present in this set.
+
+hashCode()	-	Returns the hash code of the set.
+
+headSet(element)	-	This method returns the elements which are less than the element that are present in the sorted set.
+
+isEmpty()	-	This method is used to check if a SortedSet is empty or not.
+
+last()	-	This method returns the last(highest) element present in the set.
+
+remove(element)	-	Removes the given element
+
+removeAll(collection)	-	Removes all matching elements from the set.
+
+retainAll(collection)	-	Keeps only elements present in the given collection.
+
+size()	Returns the number of elements in the set.
+
+subSet(element1, element2)	-	This method returns a sorted subset from the set containing the elements between element1 and element2.
+
+tailSet(element)	-	This method returns the elements which are greater than or equal to the element that are present in the sorted set.
+
+toArray()	-   This method is used to form an array of the same elements as that of the Set.

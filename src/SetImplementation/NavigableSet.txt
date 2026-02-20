@@ -1,0 +1,47 @@
+In Java, the NavigableSet is a subtype of the SortedSet interface. It allows us to perform various operations like getting the closest matches for a given element, descending order iteration, and others. It provides methods to navigate through the elements in the set.
+
+For Example, The NavigableSet interface allows us to navigate through the set in both ascending and descending order, unlike the SortedSet which only supports the ascending order. The classes that implement the NavigableSet interface are TreeSet and ConcurrentSkipListSet
+
+-NavigableSet extends SortedSet and thus provides methods like first(), last(), headSet(), tailSet(), etc.
+
+-It allows you to navigate in both directions ascending and descending order
+
+-The most common implementation of NavigableSet is TreeSet.
+
+Example: This example demonstrates creating a NavigableSet using TreeSet and adding elements to it, which automatically sorts them in ascending order.
+
+// Java program to demonstrates
+// the working of NavigableSet
+import java.util.*;
+
+public class Geeks {
+    public static void main(String[] args) {
+        NavigableSet<Integer> ns = new TreeSet<>();
+
+        // Add elements to the set
+        ns.add(10);
+        ns.add(20);
+        ns.add(30);
+        ns.add(40);
+        ns.add(50);
+
+        System.out.println("Navigable Set: " + ns);
+    }
+}
+
+Output
+Navigable Set: [10, 20, 30, 40, 50]
+
+TreeSet is a class that implements NavigableSet, which in turn extends SortedSet, which extends Set.
+
+Declaration of NavigableSet
+In Java, the declaration of NavigableSet can be declared as:
+
+NavigableSet<Type> setName;
+
+Note: "Type" is the type of element in the set (e.g. integer, String, etc) and setName is the name of the variable.
+
+Creating NavigableSet Objects
+We can not create a NavigableSet directly since it's an interface. Instead we use a class like TreeSet that implements it. With the help of generics, we can define the type of objects the set will store. This type-safe set can be defined as:
+
+NavigableSet<Obj> set = new TreeSet<Obj>();

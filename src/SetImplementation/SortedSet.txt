@@ -1,0 +1,41 @@
+The SortedSet interface is present in java.util package that extends the Set interface. which maintains unique elements in sorted order, either by natural ordering or a custom comparator.
+
+Elements are maintained in ascending order by default.
+
+Ensures that no duplicate elements are present, consistent with the Set interface.
+
+Null elements are not allowed, especially if natural ordering or a custom comparator is used.
+
+Declaration Syntax
+
+Since SortedSet is an interface, objects cannot be created directly. Use a class like TreeSet that implements it.
+
+public interface SortedSet<E> extends Set<E>
+
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class GFG{
+
+    public static void main(String[] args){
+
+        SortedSet<Integer> set = new TreeSet<>();
+        set.add(50);
+        set.add(20);
+        set.add(40);
+        set.add(10);
+
+        System.out.println(set);
+        System.out.println("First element: " + set.first());
+        System.out.println("Last element: " + set.last());
+    }
+}
+Output
+[10, 20, 40, 50]
+First element: 10
+Last element: 50
+
+Explanation:
+-A TreeSet implements SortedSet.
+-Elements are automatically sorted in ascending order.
+-first() and last() return the smallest and largest elements, respectively.
