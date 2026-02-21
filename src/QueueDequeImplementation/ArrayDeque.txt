@@ -1,0 +1,50 @@
+ArrayDeque is a resizable-array implementation of the Deque interface in Java. It is part of java.util package provides a double-ended queue implementation, allowing elements to be added or removed from both ends efficiently.
+
+ArrayDeque grows dynamically.
+
+It generally provides faster operations than LinkedList as it is more cache friendly and does not require overhead of next previous reference management.
+
+Operations like addFirst(), addLast(), removeFirst(), removeLast() are all done in constant time O(1).
+
+ArrayDeque is not Thread-Safe
+
+
+Declaration of ArrayDeque
+In Java, the declaration of ArrayDeque can be done as:
+
+    ArrayDeque<Type> deque = new ArrayDeque<>();
+
+Here, "Type" is the type of the element the deque will hold (e.g. Integer, String).
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class Geeks {
+
+    public static void main(String[] args) {
+
+        Deque<Integer> d = new ArrayDeque<>();
+        d.addFirst(1);
+        d.addLast(2);
+        int f = d.removeFirst();
+        int l = d.removeLast();
+        System.out.println("First: " + f + ", Last: " + l);
+    }
+}
+Output
+First: 1, Last: 2
+
+Constructors of ArrayDeque
+1. ArrayDeque()
+This constructor is used to create an empty ArrayDeque and by default holds an initial capacity to hold 16 elements.
+
+ArrayDeque<Integer> deque = new ArrayDeque<>();
+
+2. ArrayDeque(Collection<? extends E> c)
+This constructor is used to create an ArrayDeque containing all the elements the same as that of the specified collection.
+
+ArrayDeque<Integer> deque = new ArrayDeque<>(list);
+
+3. ArrayDeque(int numofElements)
+This constructor is used to create an empty ArrayDeque and holds the capacity to contain a specified number of elements.
+
+ArrayDeque<String> deque = new ArrayDeque<>(25); // capacity = 25

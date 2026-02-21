@@ -1,0 +1,49 @@
+In Java, the ConcurrentSkipListSet is the part of the java.util.concurrent package and provides a scalable, thread-safe alternative to TreeSet. It is a sorted set that lets multiple threads safely access and modify the set at the same time without causing issues.
+
+It is thread-safe.
+Elements are in sorted order, and it supports navigable set operations (e.g., floor, ceiling, higher, lower).
+Designed for high concurrency and to avoid contention between threads, unlike synchronized collections like TreeSet.
+Example: This example demonstrates, how to use a ConcurrentSkipListSet to store unique integers in a thread-safe sorted order.
+
+// Java Program to demonstrates the working of
+// ConcurrentSkipListSet
+import java.util.concurrent.*;
+
+public class Geeks {
+    public static void main(String[] args)
+    {
+        ConcurrentSkipListSet<Integer> s
+            = new ConcurrentSkipListSet<>();
+
+        // Adding elements
+        s.add(10);
+        s.add(20);
+        s.add(30);
+
+        // Displaying the set
+        System.out.println("Set: " + s);
+    }
+}
+
+Output
+Set: [10, 20, 30]
+
+Declaration of ConcurrentSkipListSet
+In Java, the declaration of ConcurrentSkipListSet can be done as:
+
+ConcurrentSkipListSet<Type> set = new ConcurrentSkipListSet<>();
+
+Parameter: It takes a Comparator to define custom sorting
+Return Type: It returns a ConcurrentSkipListSet of elements, maintaining thread safety and sorted order.
+Constructors
+
+Constructor     -       Description
+
+ConcurrentSkipListSet() -   It is used to construct an empty set.
+
+ConcurrentSkipListSet(Collection<E> c)  -   It is used to construct a set with the elements of the Collection passed as the parameter.
+
+ConcurrentSkipListSet(Comparator<E> comparator) -   It is sed to construct a new, empty set that orders its elements according to the specified comparator.
+
+ConcurrentSkipListSet(SortedSet<E> s)   -   It is sed to construct a new set containing the same elements and using the same ordering as the specified sorted set.
+

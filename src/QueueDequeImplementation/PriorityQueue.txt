@@ -1,0 +1,57 @@
+A PriorityQueue in Java is a queue where elements are ordered based on their priority, rather than the order of insertion. By default, it uses natural ordering (min-heap), but a custom comparator can be used to define different priorities.
+
+-Elements are processed based on priority rather than insertion order.
+
+-Supports standard queue operations like add(), poll(), and peek().
+
+-Automatically grows as elements are added.
+-Uses a heap data structure internally to ensure efficient insertion and removal of the highest-priority element.
+
+
+Declaration of PriorityQueue
+    public class PriorityQueue<E> extends AbstractQueue<E> implements Serializable
+
+where, E is the type of elements held in this queue.
+
+import java.util.PriorityQueue;
+
+public class Geeks
+{
+    public static void main(String[] args)
+    {
+      	// Priority Queue Min Type
+        PriorityQueue<Integer> p = new PriorityQueue<>();
+
+        // Add elements to the queue
+        p.add(3);
+        p.add(10);
+        p.add(7);
+        p.add(2);
+
+        // Print the head of the queue
+        System.out.println("Head of Queue: " + p.peek());
+    }
+}
+Output
+Head of Queue: 2
+
+Constructors of PriorityQueue
+1. PriorityQueue()
+This method creates a PriorityQueue with the default initial capacity (11) that orders its elements according to their natural ordering.
+
+PriorityQueue<E> pq = new PriorityQueue<E>();
+
+2. PriorityQueue(int initialCapacity)
+This creates a PriorityQueue with the specified initial capacity that orders its elements according to their natural ordering.
+
+PriorityQueue<E> pq = new PriorityQueue<E>(int initialCapacity);
+
+3. PriorityQueue(Comparator<E> comparator)
+This creates a PriorityQueue with the default initial capacity and whose elements are ordered according to the specified comparator.
+
+PriorityQueue<E> pq = new PriorityQueue<E>(Comparator<E> c);
+
+4. PriorityQueue(int initialCapacity, Comparator<E> comparator)
+This creates a PriorityQueue with the specified initial capacity that orders its elements according to the specified comparator.
+
+PriorityQueue<E> pq = new PriorityQueue<E>(int initialCapacity, Comparator<E> comparator);

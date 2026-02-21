@@ -1,0 +1,114 @@
+Methods
+
+Methods     -       Description
+
+add(E e)	-   Adds the specified element to this set if it is not already present.
+
+ceiling(E e)	-   Returns the least element in this set greater than or equal to the given element, or null if there is no such element.
+
+clear()	-   Removes all of the elements from this set.
+
+clone()	-   Returns a shallow copy of this ConcurrentSkipListSet instance.
+
+comparator()	-   Returns the comparator used to order the elements in this set, or null if this set uses the natural ordering of its elements.
+
+contains(Object o)	-   Returns true if this set contains the specified element.
+
+descendingIterator()	-   Returns an iterator over the elements in this set in descending order.
+
+descendingSet()	-   Returns a reverse order view of the elements contained in this set.
+
+equals(Object o)	-   Compares the specified object with this set for equality.
+
+first()	Returns the first (lowest) -    element currently in this set.
+
+floor(E e)	-    Returns the greatest element in this set less than or equal to the given element, or null if there is no such element.
+
+headSet(E toElement)	-    Returns a view of the portion of this set whose elements are strictly less than toElement.
+
+headSet(E toElement, boolean inclusive)	-    Returns a view of the portion of this set whose elements are less than (or equal to, if inclusive is true) toElement.
+
+higher(E e)	-    Returns the least element in this set strictly greater than the given element, or null if there is no such element.
+
+isEmpty()	-    Returns an iterator over the elements in this set in ascending order.
+
+last()	-    Returns the last (highest) element currently in this set.
+
+lower(E e)	-    Returns the greatest element in this set strictly less than the given element, or null if there is no such element.
+
+pollFirst()	-    Retrieves and removes the first (lowest) element, or returns null if this set is empty.
+
+pollLast()	-    Retrieves and removes the last (highest) element, or returns null if this set is empty.
+
+remove(Object o)	-    Removes the specified element from this set if it is present.
+
+removeAll(Collection<?> c)	-    Removes from this set all of its elements that are contained in the specified collection.
+
+size()	-    Returns the number of elements in this set.
+
+spliterator()	-    Returns a Spliterator over the elements in this set.
+
+subSet(E fromElement, boolean fromInclusive, E toElement, boolean toInclusive)  -    Returns a view of the portion of this set whose elements range from fromElement to toElement.
+
+subSet(E fromElement, E toElement)	-    Returns a view of the portion of this set whose elements range from fromElement, inclusive, to toElement, exclusive.
+
+tailSet(E fromElement)	-    Returns a view of the portion of this set whose elements are greater than or equal to fromElement.
+
+tailSet(E fromElement, boolean inclusive)	-    Returns a view of the portion of this set whose elements are greater than (or equal to, if inclusive is true) fromElement.
+
+________________________________________________________________________
+
+Method Inherited from Class java.util.AbstractSet
+Methods     -       Description
+
+hashCode()	  -     Returns the hash code value for this set.
+
+---------------------------------------------------------
+Methods Inherited from Class java.util.AbstractCollection
+Methods     -       Description
+
+addAll(Collection<? extends E> c)	-   Adds all of the elements in the specified collection to this collection (optional operation).
+
+containsAll(Collection<?> c)	-   Returns true if this collection contains all of the elements in the specified collection.
+
+retainAll(Collection<?> c)	-   Retains only the elements in this collection that are contained in the specified collection (optional operation).
+
+toArray()	-   Returns an array containing all of the elements in this collection.
+
+toArray(T[] a)	-   Returns an array containing all of the elements in this collection; the runtime type of the returned array is that of the specified array.
+
+toString()	-   Returns a string representation of this collection.
+
+___________________________________________________________________
+
+Methods Inherited from Interface java.util.Set
+Methods     -       Description
+
+addAll(Collection<? extends E> c)	    -   Adds all of the elements in the specified collection to this set if they're not already present (optional operation).
+
+containsAll(Collection<?> c)	-   Returns true if this set contains all of the elements of the specified collection.
+
+hashCode()	   -    Returns the hash code value for this set.
+
+retainAll(Collection<?> c)	-   Retains only the elements in this set that are contained in the specified collection (optional operation).
+
+toArray()	-   Returns an array containing all of the elements in this set.
+
+toArray(T[] a)	-   Returns an array containing all of the elements in this set; the runtime type of the returned array is that of the specified array.
+
+_____________________________________________________________
+
+Methods Inherited from Interface java.util.Collection
+Methods     -       Description
+
+parallelStream()	-   Returns a possibly parallel Stream with this collection as its source.
+
+removeIf(Predicate<? super E> filter)	-   Removes all of the elements of this collection that satisfy the given predicate.
+
+stream()	-   Returns a sequential Stream with this collection as its source.
+
+___________________________________________________
+Method Inherited from Interface java.lang.Iterable
+Methods     -      Description
+
+forEach(Consumer<? super T> action)	-   Performs the given action for each element of the Iterable until all elements have been processed or the action throws an exception.
