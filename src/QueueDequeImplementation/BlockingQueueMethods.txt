@@ -1,0 +1,31 @@
+Methods of BlockingQueue
+
+Method	    -       Description
+
+void put(E e)	-   Inserts the specified element, waiting if necessary for space to become available.
+
+E take()	-   Retrieves and removes the head element, waiting if necessary until an element becomes available.
+
+boolean offer(E e)	-   Inserts the specified element immediately, returning false if the queue is full.
+
+boolean offer(E e, long timeout, TimeUnit unit)	-   Inserts the element, waiting up to the specified time for space.
+
+E poll()	-   Retrieves and removes the head element immediately, or returns null if the queue is empty.
+
+E poll(long timeout, TimeUnit unit)	-   Retrieves and removes the head element, waiting up to the specified time if empty.
+
+E peek()	-   Retrieves, but does not remove, the head element, or returns null if empty.
+
+boolean add(E e)	-   Inserts the specified element immediately, throwing an exception if the queue is full.
+
+boolean remove(Object o)	-   Removes a specific element from the queue if present.
+
+boolean contains(Object o)	-   Checks if the specified element exists in the queue.
+
+int remainingCapacity()	-   Returns the number of additional elements the queue can accept without blocking.
+
+boolean isEmpty()	-   Checks if the queue contains no elements.
+
+Iterator<E> iterator()	-   Returns an iterator over the elements in the queue in proper sequence.
+
+E element()	-   Retrieves, but does not remove, the head element; throws NoSuchElementException if empty.

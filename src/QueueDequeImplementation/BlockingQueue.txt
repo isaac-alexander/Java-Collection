@@ -1,0 +1,48 @@
+BlockingQueue is part of the java.util.concurrent package and extends the Queue interface. It represents a thread-safe queue that supports operations that wait for the queue to become non-empty when retrieving an element, and wait for space to become available when storing an element.
+
+Thread Safe: BlockingQueue implementations are thread-safe, with all methods being atomic.
+
+Blocking Operation: Has blocking behavior if the queue is full (for producers) or empty (for consumers).
+
+No Null Elements: Attempts to insert a null will result in a NullPointerException.
+
+Declaration
+    public interface BlockingQueue<E> extends Queue<E>
+
+Here, E is the type of elements stored in the Collection.
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class GFG{
+
+    public static void main(String[] args) throws InterruptedException{
+
+        BlockingQueue<Integer> queue = new LinkedBlockingQueue<>(3);
+
+        // Add elements
+        queue.put(1);
+        queue.put(2);
+        queue.put(3);
+
+        System.out.println("BlockingQueue: " + queue);
+    }
+}
+Output
+BlockingQueue: [1, 2, 3]
+
+Classes that Implement BlockingQueue
+LinkedBlockingQueue: An optionally bounded blocking queue backed by linked nodes, usually with higher throughput than ArrayBlockingQueue.
+ArrayBlockingQueue: A bounded blocking queue backed by an array that stores elements in FIFO order.
+Types of BlockingQueue
+There are two types of BlockingQueue.
+
+1. Unbounded Queue
+Unbounded Queue is a queue that has no fixed capacity limit, allowing elements to be added indefinitely until system memory is exhausted.
+
+BlockingQueue blockingQueue = new LinkedBlockingDeque();
+
+2. Bounded Queue
+Bounded Queue is a queue with a fixed capacity that limits the number of elements it can hold at a time.
+
+BlockingQueue blockingQueue = new LinkedBlockingDeque(5);
