@@ -1,0 +1,94 @@
+Methods of AbstractQueue
+METHOD      -       DESCRIPTION
+
+add(E e)	-   Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions, returning true upon success, and throwing an IllegalStateException if no space is currently available.
+
+addAll(Collection<? extends E> c)	-   Adds all the elements in the specified collection to this queue.
+
+clear()	-   Removes all the elements from this queue.
+
+element()	-   Retrieves, but does not remove, the head of this queue.
+
+remove()	-   Retrieves and removes the head of this queue.
+
+_______________________________________________________________________
+
+Methods declared in class java.util.AbstractCollection
+METHOD      -       DESCRIPTION
+
+contains(Object o)	-   Returns true if this collection contains the specified element.
+
+containsAll(Collection<?> c)	-   Returns true if this collection contains all of the elements in the specified collection.
+
+isEmpty()	-   Returns true if this collection contains no elements.
+
+iterator()	-   Returns an iterator over the elements contained in this collection.
+
+remove(Object o)	-   Removes a single instance of the specified element from this collection, if it is present (optional operation).
+
+removeAll(Collection<?> c)	-   Removes all of this collection's elements that are also contained in the specified collection (optional operation).
+
+retainAll(Collection<?> c)	-   Retains only the elements in this collection that are contained in the specified collection (optional operation).
+
+toArray()	-   Returns an array containing all of the elements in this collection.
+
+toArray(T[] a)	-   Returns an array containing all of the elements in this collection; the runtime type of the returned array is that of the specified array.
+
+toString()	-   Returns a string representation of this collection.
+
+__________________________________________________________________________
+
+Methods declared in interface java.util.Collection
+METHOD      -       DESCRIPTION
+
+contains(Object o)	-   Returns true if this collection contains the specified element.
+
+containsAll(Collection<?> c)	-   Returns true if this collection contains all the elements in the specified collection.
+
+equals(Object o)	-   Compares the specified object with this collection for equality.
+
+hashCode()	-   Returns the hash code value for this collection.
+
+isEmpty()	-   Returns true if this collection contains no elements.
+
+iterator()	-   Returns an iterator over the elements in this collection.
+
+parallelStream()	-   Returns a possibly parallel Stream with this collection as its source.
+
+remove(Object o)	-   Removes a single instance of the specified element from this collection, if it is present (optional operation).
+
+removeAll(Collection<?> c)	-   Removes all of this collection's elements that are also contained in the specified collection (optional operation).
+
+removeIf(Predicate<? super E> filter)	-   Removes all the elements of this collection that satisfy the given predicate.
+
+retainAll(Collection<?> c)	-   Retains only the elements in this collection that are contained in the specified collection (optional operation).
+
+size()	-   Returns the number of elements in this collection.
+
+spliterator()	-   Creates a Spliterator over the elements in this collection.
+
+stream()	-   Returns a sequential Stream with this collection as its source.
+
+toArray()	-   Returns an array containing all the elements in this collection.
+
+toArray(IntFunction<T[]> generator)	-   Returns an array containing all the elements in this collection, using the provided generator function to allocate the returned array.
+
+toArray(T[] a)	-   Returns an array containing all the elements in this collection; the runtime type of the returned array is that of the specified array.
+
+________________________________________________________________________
+
+Methods declared in interface java.lang.Iterable
+METHOD      -       DESCRIPTION
+
+forEach(Consumer<? super T> action)	-   Performs the given action for each element of the Iterable until all elements have been processed or the action throws an exception.
+
+________________________________________________________________________
+
+Methods declared in interface java.util.Queue
+METHOD      -       DESCRIPTION
+
+offer(E e)	-   Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions.
+
+peek()	-   Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+
+poll()	-   Retrieves and removes the head of this queue, or returns null if this queue is empty.

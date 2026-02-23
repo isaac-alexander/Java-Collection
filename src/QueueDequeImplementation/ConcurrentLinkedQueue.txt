@@ -1,0 +1,40 @@
+ConcurrentLinkedQueue is the part of the java.util.concurrent package and implements a FIFO(First-In-First-Out) queue. It is a thread-safe, non-blocking, and scalable queue designed for use in highly concurrent environments. The queue uses a lock-free algorithm, ensuring that multiple threads can safely enqueue and dequeue elements without the need for external synchronization.
+
+The queue allows multiple threads to perform operations without locking
+
+It can be accessed by multiple threads concurrently without causing data corruption
+
+The queue maintains the order of elements as they are added
+
+Example: This example demonstrates creating a thread-safe ConcurrentLinkedQueue, adding elements to it and printing the queue.
+
+import java.util.concurrent.ConcurrentLinkedQueue;
+
+public class Geeks {
+    public static void main(String[] args){
+
+        ConcurrentLinkedQueue<Integer> q = new ConcurrentLinkedQueue<>();
+
+        q.offer(1);
+        q.offer(2);
+        q.offer(3);
+
+        System.out.println("Queue after adding elements: " + q);
+    }
+}
+
+Output
+Queue after adding elements: [1, 2, 3]
+
+Declaration of ConcurrentLinkedQueue
+In Java, the declaration of ConcurrentLinkedQueue can be done as:
+
+ConcurrentLinkedQueue<Type> queueName = new ConcurrentLinkedQueue<>();
+
+Constructors
+
+Constructor     -       Description
+
+ConcurrentLinkedQueue() -   It  is used to construct an empty queue.
+
+ConcurrentLinkedQueue(Collection<E> c)  -   It  is used to construct a queue with the elements of the Collection passed as the parameter.

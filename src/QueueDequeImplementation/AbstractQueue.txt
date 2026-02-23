@@ -1,0 +1,79 @@
+The AbstractQueue class in Java is a part of the Java Collection Framework and implements the Collection interface and the AbstractCollection class. It provides skeletal implementations of some Queue operations. The implementations in this class are appropriate when the base implementation does not allow null elements.
+
+Methods add, remove, and element are based on offer, poll, and peek, respectively, but throw exceptions instead of indicating failure via false or null returns.
+
+Key Features of AbstractQueue:
+1. Abstract Class: It is an abstract class, meaning it cannot be instantiated directly. It serves as a base class for concrete queue implementations.
+
+2. Partial Implementation: Provides default implementations for common methods of the Queue interface, such as add(), remove(), and element(). These methods internally call the abstract methods offer(), poll(), and peek(), which must be implemented by subclasses.
+
+3. Non-Blocking: Unlike BlockingQueue, it does not provide methods to block threads, instead it focuses on basic queue behavior.
+
+// Java Program Implementing AbstractQueue
+import java.util.*;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Creating object of AbstractQueue<Integer>
+        AbstractQueue<Integer> a = new LinkedBlockingQueue<Integer>();
+
+        // Adding element
+        a.add(1);
+        a.add(2);
+        a.add(3);
+
+        System.out.println("AbstractQueue : " + a);
+    }
+}
+
+Output
+AbstractQueue : [1, 2, 3]
+
+This class implements Iterable<E>, Collection<E>, Queue<E> interfaces and extends AbstractCollection
+
+Declaration of AbstractQueue
+public abstract class AbstractQueue<E> extends AbstractCollection<E>
+                                                                     implements Queue<E>
+
+E - Type of element maintained by the Collection Framework class or interface.
+
+
+Constructors in Java AbstractQueue
+Since AbstractQueue is an abstract class, it's implementation is provided by its sub-classes. Below shows the list of classes that can provide the implementation. To create it, we need to it from java.util.AbstractQueue.
+
+protected AbstractQueue(): The default constructor, but being abstract, it doesn't allow to create an AbstractQueue object.
+
+The implementation should be provided by one of its subclasses like ArrayBlockingQueue, ConcurrentLinkedQueue, DelayQueue, LinkedBlockingDeque, LinkedBlockingQueue, LinkedTransferQueue, PriorityBlockingQueue, PriorityQueue, SynchronousQueue.
+
+AbstractQueue<E> objName = new ArrayBlockingQueue<E>();
+
+ Below is a sample program to illustrate AbstractQueue in Java:
+
+ // Java code to illustrate AbstractQueue
+ import java.util.*;
+ import java.util.concurrent.LinkedBlockingQueue;
+
+ public class AbstractQueueExample
+ {
+     public static void main(String[] argv) throws Exception
+     {
+         // Creating object of AbstractQueue<Integer>
+         AbstractQueue<Integer> a = new LinkedBlockingQueue<Integer>();
+
+         // Adding elements to the Queue
+         a.add(10);
+        	a.add(20);
+         a.add(30);
+         a.add(40);
+         a.add(50);
+
+         // Print the queue contents to the console
+         System.out.println("AbstractQueue contains: " + a);
+     }
+ }
+
+ Output
+ AbstractQueue contains: [10, 20, 30, 40, 50]

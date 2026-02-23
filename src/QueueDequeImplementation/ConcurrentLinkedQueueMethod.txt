@@ -1,0 +1,82 @@
+Methods of ConcurrentLinkedQueue
+
+Method      -       Description
+
+add(E e)	-   Inserts the specified element at the tail of this queue.
+
+addAll(Collection<? extends E> c)	-   Appends all of the elements in the specified collection to the end of this queue, in the order that they are returned by the specified collection's iterator.
+
+contains(Object o)	-   Returns true if this queue contains the specified element.
+
+forEach(Consumer<? super E> action)	-   Performs the given action for each element of the Iterable until all elements have been processed or the action throws an exception.
+
+isEmpty()	-   Returns true if this queue contains no elements.
+
+iterator()	-   Returns an iterator over the elements in this queue in the proper sequence.
+
+offer(E e)	-   Inserts the specified element at the tail of this queue.
+
+remove(Object o)	-   Removes a single instance of the specified element from this queue, if it is present.
+
+removeAll(Collection<?> c)	-   Removes all of this collection's elements that are also contained in the specified collection (optional operation).
+
+removeIf(Predicate<? super E> filter)	-   Removes all of the elements of this collection that satisfy the given predicate.
+
+retainAll(Collection<?> c)	-   Retains only the elements in this collection that are contained in the specified collection (optional operation).
+
+size()	-   Returns the number of elements in this queue.
+
+spliterator()	-   Returns a Spliterator over the elements in this queue.
+
+toArray()	-   Returns an array containing all of the elements in this queue, in the proper sequence.
+
+toArray(T[] a)	-   Returns an array containing all of the elements in this queue, in proper sequence; the runtime type of the returned array is that of the specified array.
+
+_____________________________________________________________
+Methods Declared in Class java.util.AbstractQueue
+Methods     -       Description
+
+clear()	-   Removes all the elements from this queue.
+
+element()	-   Retrieves, but does not remove, the head of this queue.
+
+remove()	-   Retrieves and removes the head of this queue.
+
+-------------------------------------------------------------
+Methods Declared in Class java.util.AbstractCollection
+Method      -       Description
+
+containsAll(Collection<?> c)	-   Returns true if this collection contains all of the elements in the specified collection.
+
+toString()	-   Returns a string representation of this collection.
+
+__________________________________________________________________
+Methods Declared in Interface java.util.Collection
+Method      -       Description
+
+clear()	-   Removes all of the elements from this collection (optional operation).
+
+containsAll(Collection<?> c)	-   Returns true if this collection contains all of the elements in the specified collection.
+
+equals(Object o)	   -    Compares the specified object with this collection for equality.
+
+hashCode()	-   Returns the hash code value for this collection.
+
+parallelStream()	-   Returns a possibly parallel Stream with this collection as its source.
+
+stream()	-   Returns a sequential Stream with this collection as its source.
+
+toArray(IntFunction<T[]> generator)	-   Returns an array containing all of the elements in this collection, using the provided generator function to allocate the returned array.
+
+__________________________________________________________________
+
+Methods Declared in Interface java.util.Queue
+Method      -       Description
+
+element()	-   Retrieves, but does not remove, the head of this queue.
+
+peek()	-   Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+
+poll()	-   Retrieves and removes the head of this queue, or returns null if this queue is empty.
+
+remove()	-   Retrieves and removes the head of this queue.
