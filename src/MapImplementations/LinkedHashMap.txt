@@ -1,0 +1,78 @@
+LinkedHashMap in Java implements the Map interface of the Collections Framework. It stores key-value pairs while maintaining the insertion order of the entries. It maintains the order in which elements are added.
+
+Stores unique key-value pairs.
+
+Maintains insertion order.
+
+Allows one null key and multiple null values.
+
+It is not thread-safe; to synchronize it, use Collections.synchronizedMap().
+
+
+Declaration of LinkedHashMap
+    public class LinkedHashMap<K,​V> extends HashMap<K,​V> implements Map<K,​V>
+
+Here, K is the key Object type and V is the value Object type
+
+K: The type of keys in the map.
+V: The type of values mapped in the map.
+
+import java.util.LinkedHashMap;
+
+public class Geeks{
+
+    public static void main(String[] args){
+
+        // Create a LinkedHashMap of Strings (keys) and Integers (values)
+        LinkedHashMap<String, Integer> lhm = new LinkedHashMap<>();
+
+        // Adding key-value pairs
+        lhm.put("Apple", 50);
+        lhm.put("Banana", 30);
+        lhm.put("Mango", 70);
+        lhm.put("Orange", 40);
+
+        // Displaying the LinkedHashMap
+        System.out.println("LinkedHashMap: " + lhm);
+    }
+}
+Output
+LinkedHashMap: {Apple=50, Banana=30, Mango=70, Orange=40}
+
+
+Internal Working of LinkedHashMap
+LinkedHashMap extends HashMap and implements the Map interface:
+
+public class LinkedHashMap extends HashMap implements Map
+
+It stores data as nodes similar to a doubly-linked list, maintaining insertion order. Each node contains:
+
+-Key: Since this class extends HashMap, the data is stored in the form of a key-value pair. Therefore, this parameter is the key to the data.
+
+-Value: For every key, there is a value associated with it. This parameter stores the value of the keys. Due to generics, this value can be of any form.
+
+-Next: Since the LinkedHashMap stores the insertion order, this contains the address to the next node of the LinkedHashMap.
+
+-Previous: This parameter contains the address to the previous node of the LinkedHashMap.
+
+Hierarchy of LinkedHashMap
+It extends HashMap and maintains a doubly-linked list to preserve the insertion order of elements.
+
+
+Constructors of LinkedHashMap Class
+LinkedHashMap class provides various constructors for different use cases:
+
+1. LinkedHashMap()
+Creates an empty LinkedHashMap with default initial capacity (16) and load factor (0.75)
+
+LinkedHashMap<K, V> lhm = new LinkedHashMap<>();
+
+2. LinkedHashMap(int initialCapacity, float loadFactor)
+Creates a LinkedHashMap with specified capacity and load factor.
+
+LinkedHashMap<K, V> lhm = new LinkedHashMap<>(20, 0.75f);
+
+3. LinkedHashMap(Map<? extends K,​? extends V> map)
+Creates a LinkedHashMap containing all elements from the specified map, maintaining their insertion order.
+
+LinkedHashMap<K, V> lhm = new LinkedHashMap<>(existingMap);

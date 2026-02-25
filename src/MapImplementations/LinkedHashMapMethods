@@ -1,0 +1,28 @@
+Methods of LinkedHashMap
+Commonly used methods of the LinkedHashMap class:
+
+Method	    -       Description
+
+put(K key, V value)	-   Adds or updates a key-value pair in the map.
+
+get(Object key)	-   Returns the value associated with the specified key.
+
+remove(Object key)	-   Removes the mapping for the specified key.
+
+containsKey(Object key)	-   Checks if the map contains the specified key.
+
+containsValue(Object value)	-   Checks if the map contains the specified value.
+
+clear()	-   Removes all key-value pairs from the map.
+
+size()	-   Returns the number of key-value pairs in the map.
+
+isEmpty()	-   Checks if the map is empty.
+
+keySet()	-   Returns a Set view of all keys in the map.
+
+values()	-   Returns a Collection view of all values in the map.
+
+entrySet()	-   Returns a Set view of all key-value mappings in the map.
+
+getOrDefault(Object key, V defaultValue)	-   Returns the value for a key, or a default value if the key is not found.
