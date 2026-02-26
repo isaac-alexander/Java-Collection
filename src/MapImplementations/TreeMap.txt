@@ -1,0 +1,47 @@
+A TreeMap in Java is a part of the java.util package that implements the Map interface. It stores key-value pairs in a sorted order using either a natural or custom comparator.
+
+TreeMap internally uses a Red-Black Tree for efficient sorting.
+
+Provides O(log n) time for insertion, deletion and lookup.
+
+TreeMap does not allow null keys, but allows null values.
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class TreeMapCreation {
+    public static void main(String args[]){
+
+        // Create a TreeMap of Strings (keys) and Integers
+        // (values)
+        TreeMap<String, Integer> tm = new TreeMap<>();
+
+        System.out.println("TreeMap elements: " + tm);
+    }
+}
+Output
+TreeMap elements: {}
+
+Constructors of TreeMap
+In order to create a TreeMap, we need to create an object of the TreeMap class. The TreeMap class consists of various constructors that allow the possible creation of the TreeMap. The following are the constructors available in this class:
+
+1. TreeMap()
+This constructor is used to build an empty TreeMap that will be sorted by using the natural order of its keys.
+
+Syntax:
+
+TreeMap<K, V> map = new TreeMap<>();
+
+2. TreeMap(Comparator comp):
+This constructor is used to build an empty TreeMap object in which the elements will need an external specification of the sorting order.
+
+Syntax:
+
+TreeMap<K, V> map = new TreeMap<>(Comparator<? super K> comparator);
+
+3. TreeMap(Map M)
+This constructor is used to initialize a TreeMap with the entries from the given map M which will be sorted by using the natural order of the keys.
+
+Syntax:
+
+TreeMap<K, V> map = new TreeMap<>(Map<? extends K, ? extends V> m);

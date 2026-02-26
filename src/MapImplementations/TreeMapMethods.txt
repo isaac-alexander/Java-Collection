@@ -1,0 +1,35 @@
+Methods of TreeMap
+
+Method	    -       Action Performed
+
+clear()	 -  The method removes all mappings from this TreeMap and clears the map.
+
+clone()	-   The method returns a shallow copy of this TreeMap.
+
+containsKey(Object key)	-   Returns true if this map contains a mapping for the specified key.
+
+containsValue(Object value)	-   Returns true if this map maps one or more keys to the specified value.
+
+entrySet()	-   Returns a set view of the mappings contained in this map.
+
+firstKey()	  -   Returns the first (lowest) key currently in this sorted map.
+
+get(Object key)	-   Returns the value to which this map maps the specified key.
+
+headMap(Object key_value)	-   The method returns a view of the portion of the map strictly less than the parameter key_value.
+
+keySet()	-   The method returns a Set view of the keys contained in the treemap.
+
+lastKey()	-   Returns the last (highest) key currently in this sorted map.
+
+put(Object key, Object value)	-   The method is used to insert a mapping into a map.
+
+putAll(Map map)	-   Copies all of the mappings from the specified map to this map.
+
+remove(Object key)	-   Removes the mapping for this key from this TreeMap if present.
+
+size()	-   Returns the number of key-value mappings in this map.
+
+subMap(K startKey, K endKey)	-   The method returns the portion of this map whose keys range from startKey, inclusive, to endKey, exclusive.
+
+values()	-   Returns a collection view of the values contained in this map.
