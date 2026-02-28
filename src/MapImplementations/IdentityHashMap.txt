@@ -1,0 +1,100 @@
+The IdentityHashMap implements Map interface using Hashtable, using reference-equality in place of object-equality when comparing keys (and values). This class is not a general-purpose Map implementation. While this class implements the Map interface, it intentionally violates Map's general contract, which mandates the use of the equals() method when comparing objects. This class is used when the user requires the objects to be compared via reference. It belongs to java.util package.
+
+Features of IdentityHashMap
+
+It follows reference equality, instead of using the equals() method it uses the == operator.
+It is not synchronized and must be synchronized externally.
+Iterators are fail-fast, throw ConcurrentModificationException in an attempt to modify while iterating.
+This class provides constant-time performance for the basic operations (get and put), assuming the system identity hash function (System.identityHashCode(Object)) disperses elements properly among the buckets. IdentityHashMap doesn't use hashCode() method instead it uses System.identityHashCode() method. This is a significant difference because now you can use mutable objects as key in Map whose hash code is likely to change when the mapping is stored inside IdentityHashMap.
+Declaration:
+
+
+public class IdentityHashMap<K,?V> extends AbstractMap<K,?V> implements Map<K,?V>, Serializable, Cloneable
+
+
+
+Here, K is the key Object type and V is the value Object type.
+
+In Java, IdentityHashMap is a class that implements the Map interface. It is similar to the HashMap class, with the main difference being that IdentityHashMap uses reference equality instead of object equality when comparing keys.
+
+While HashMap uses the equals() method to compare the keys, IdentityHashMap uses the == operator to compare the keys. This means that in an IdentityHashMap, two keys are considered equal if and only if they are the same object, rather than being equal in terms of their contents.
+
+Here is an example of how you might use an IdentityHashMap in Java:
+
+import java.util.IdentityHashMap;
+
+public class Example {
+    public static void main(String[] args) {
+        IdentityHashMap<String, Integer> identityHashMap = new IdentityHashMap<>();
+        identityHashMap.put("A", 1);
+        identityHashMap.put(new String("A"), 2);
+        System.out.println(identityHashMap.size()); // 2
+        System.out.println(identityHashMap.get("A")); // 1
+    }
+}
+output;
+2
+1
+
+The IdentityHashMap class in Java is a hash table-based implementation of the Map interface that uses reference-equality in place of object-equality when comparing keys (and values).
+
+Advantages of using IdentityHashMap over HashMap:
+Faster lookups: Since IdentityHashMap uses reference-equality for comparison, it is faster for lookups compared to HashMap which uses object-equality.
+Useful for comparing object instances: IdentityHashMap is useful in situations where you want to compare object instances rather than object values.
+Disadvantages of using IdentityHashMap:
+Uses more memory: IdentityHashMap uses more memory compared to HashMap as it needs to store the reference to the object.
+Not suitable for all use cases: IdentityHashMap is not suitable for all use cases and should be used with caution as it can lead to unexpected behavior in certain situations.
+
+ It implements Serializable, Cloneable, Map<K,? V> interfaces and extends AbstractMap<K, V> class.
+
+ Example:
+
+
+
+
+ // Java code to demonstrate IdentityHashMap
+ ​
+ import java.util.Map;
+ import java.util.HashMap;
+ import java.util.IdentityHashMap;
+ ​
+ public class IdentityHashMapExample
+ {
+     public static void main(String[] args)
+     {
+         // creating an instance of IdentityHashMap
+         Map<String, String> ihm = new IdentityHashMap<>();
+ ​
+         // Putting key and value pair
+         // in a IdentityHashMap Object
+         ihm.put("ihmkey","ihmvalue");
+         ihm.put(new String("ihmkey"),"ihmvalue1");
+
+         // ihm.size() will print 2 since it
+         // compares the objects by reference
+         System.out.println("Size of IdentityHashMap--"+ihm.size());
+
+     }
+ }
+
+ Output
+ Size of IdentityHashMap--2
+ Constructors of IdentityHashMap
+ We can create an instance of IdentityHashMap in two ways:
+
+ IdentityHashMap<K, V> ihm = new IdentityHashMap<K, V>();
+             (or)
+ Map<K, V> hm = new IdentityHashMap<K, V>();
+ 1. IdentityHashMap(): Constructs a new, empty identity hash map with a default expected maximum size.
+
+ IdentityHashMap<K, V> ihm = new IdentityHashMap<K, V>();
+
+
+ 2. IdentityHashMap(int expectedMaxSize): Constructs a new, empty map with the specified expected maximum size.
+
+ IdentityHashMap<K, V> ihm = new IdentityHashMap(int expectedMaxSize);
+
+
+ 3. IdentityHashMap(Map m): Constructs a new identity hash map containing the key-value mappings in the specified map.
+
+ IdentityHashMap<K, V> ihm = new IdentityHashMap(Map m)

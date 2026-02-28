@@ -1,0 +1,17 @@
+WeakHashMap is an implementation of the Map interface. WeakHashMap is almost the same as HashMap except in the case of WeakHashMap if the object is specified as the key doesn’t contain any references- it is eligible for garbage collection even though it is associated with WeakHashMap. i.e Garbage Collector dominates over WeakHashMap.
+
+WeakHashMap is the Hash table-based implementation of the Map interface, with weak keys. An entry in a WeakHashMap will automatically be removed when its key is no longer in ordinary use. More precisely, the presence of a mapping for a given key will not prevent the key from being discarded by the garbage collector, that is, made finalizable, finalized, and then reclaimed. When a key has been discarded its entry is effectively removed from the map, so this class behaves somewhat differently from other Map implementations.
+
+A few important features of a WeakHashMap Class are:
+
+Both null values and null keys are supported in WeakHashMap.
+It is not synchronized.
+This class is intended primarily for use with key objects whose equals methods test for object identity using the == operator.
+Constructors in WeakHashMap
+1. WeakHashMap(): This constructor is used to create an empty WeakHashMap with the default initial capacity-(16) and load factor (0.75).
+
+2. WeakHashMap(int initialCapacity): This constructor is used to create an empty WeakHashMap with the given initial capacity and the default load factor (0.75).
+
+3. WeakHashMap(int initialCapacity, float loadFactor): This constructor is used to create an empty WeakHashMap with the given initial capacity and the given load factor.
+
+4. WeakHashMap(Map m): This constructor is used to create a new WeakHashMap with the same mappings as the specified map.
