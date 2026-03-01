@@ -1,0 +1,81 @@
+Hashtable class, introduced as part of the Java Collections framework, implements a hash table that maps keys to values. Any non-null object can be used as a key or as a value. To successfully store and retrieve objects from a hashtable, the objects used as keys must implement the hashCode method and the equals method. The java.util.Hashtable class is a class in Java that provides a key-value data structure, similar to the Map interface.
+
+It is similar to HashMap, but is synchronized.
+Hashtable stores key/value pair in hash table.
+In Hashtable we specify an object that is used as a key, and the value we want to associate to that key. The key is then hashed, and the resulting hash code is used as the index at which the value is stored within the table.
+The initial default capacity of Hashtable class is 11 whereas loadFactor is 0.75.
+HashMap doesn't provide any Enumeration, while Hashtable provides not fail-fast Enumeration.
+
+import java.util.Hashtable;
+
+public class GFG
+{
+    public static void main(String args[])
+    {
+
+      	// Create a Hashtable of String
+      	// keys and Integer values
+        Hashtable<String, Integer> ht = new Hashtable<>();
+
+        // Adding elements to the Hashtable
+        ht.put("One ", 1);
+        ht.put("Two ", 2);
+        ht.put("Three ", 3);
+
+        // Displaying the Hashtable elements
+        System.out.println("Hashtable Elements: " + ht);
+    }
+}
+Output
+Hashtable Elements: {Two =2, Three =3, One =1}
+
+
+In general, it's recommended to use the Map interface or one of its implementations (such as HashMap or ConcurrentHashMap) instead of the Hashtable class.
+
+Note: While the Hashtable class still exists in Java and can still be used, it's generally recommended to use the Map interface or one of its implementations instead.
+
+
+HashTable Declaration
+    public class Hashtable<K,V> extends Dictionary<K,V> implements Map<K,V>, Cloneable, Serializable
+Type Parameters:
+K - the type of keys maintained by this map
+V - the type of mapped values
+
+HashTable Constructors
+In order to create a Hashtable, we need to import it from java.util.Hashtable. There are various ways in which we can create a Hashtable.
+
+1. Hashtable()
+This creates an empty hashtable with the default load factor of 0.75 and an initial capacity is 11.
+
+Hashtable<K, V> ht = new Hashtable<K, V>();
+
+2. Hashtable(int initialCapacity)
+This creates a hash table that has an initial size specified by initialCapacity and the default load factor is 0.75.
+
+Hashtable<K, V> ht = new Hashtable<K, V>(int initialCapacity);
+
+3. Hashtable(int size, float fillRatio)
+This version creates a hash table that has an initial size specified by size and fill ratio specified by fillRatio. fill ratio: Basically, it determines how full a hash table can be before it is resized upward and its Value lies between 0.0 to 1.0.
+
+Hashtable<K, V> ht = new Hashtable<K, V>(int size, float fillRatio);
+
+4. Hashtable(Map<? extends K,? extends V> m)
+This creates a hash table that is initialized with the elements in m.
+
+Hashtable<K, V> ht = new Hashtable<K, V>(Map m);
+
+Internal Working of Hashtable
+Hashtable datastructure is an array of buckets which stores the key/value pairs in them. It makes use of hashCode() method to determine which bucket the key/value pair should map.
+The hash function helps to determine the location for a given key in the bucket list. Generally, hashcode is a non-negative integer that is equal for equal Objects and may or may not be equal for unequal Objects. To determine whether two objects are equal or not, hashtable makes use of the equals() method.
+
+It is possible that two unequal Objects have the same hashcode. This is called a collision. To resolve collisions, hashtable uses an array of lists. The pairs mapped to a single bucket (array index) are stored in a list and list reference is stored in the array index.
+
+Advantages of Hashtable
+Thread-safe: The Hashtable class is thread-safe, meaning that multiple threads can access it simultaneously without causing data corruption or other synchronization issues.
+Simple to use: The Hashtable class is simple to use and provides basic key-value data structure functionality, which can be useful for simple cases.
+Disadvantages of Hashtable
+Obsolete: The Hashtable class is considered obsolete and its use is generally discouraged. This is because it was designed prior to the introduction of the Collections framework and does not implement the Map interface, which makes it difficult to use in conjunction with other parts of the framework.
+Limited functionality: The Hashtable class provides basic key-value data structure functionality, but does not provide the full range of functionality that is available in the Map interface and its implementations.
+Poor performance: The Hashtable class is synchronized, which can result in slower performance compared to other implementations of the Map interface, such as HashMap or ConcurrentHashMap.
+Null Support: Hashtable does not support null keys or values, that can act as limitation as there are classes like HashMap which provides the support.
+Iterator Issue: The iterators of Hashtable are not fail-fast, meaning they don't detect concurrent modifications during iteration, which can lead to inconsistent results.
