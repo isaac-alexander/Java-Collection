@@ -1,0 +1,39 @@
+Methods of ListIterator
+
+Method      -       Description
+
+add(E e)	-   This method inserts the specified element into the list.
+
+hasNext()	-   This returns true if the list has more elements to traverse.
+
+hasPrevious()	-   This returns true if the list iterator has more elements while traversing the list in the backward direction.
+
+next()	-   This method returns the next element and increases the cursor by one position.
+
+nextIndex()	-   This method returns the index of the element which would be returned on calling the next() method.
+
+previous()	-   This method returns the previous element of the list and shifts the cursor one position backward
+
+previousIndex()	-   This method returns the index of the element which would be returned on calling the previous() method.
+
+remove()	-   This method removes the last element from the list that was returned on calling next() or previous() method element from.
+
+set(E e)	-   This method replaces the last element that was returned on calling next() or previous() method with the specified element.
+
+_________________________________________________________________________
+Difference between Iterator and ListIterator
+                Iterator         -            ListIterator
+
+It can traverse a collection of any type. 	-   It traverses only list collection implemented classes like LinkedList, ArrayList, etc.
+
+Traversal can only be done in forwarding direction.	-   Traversal of elements can be done in both forward and backward direction.
+
+Iterator object can be created by calling iterator() method of the collection interface.	-   ListIterator object can be created by calling listIterator() method of the collection interface.
+
+Deletion of elements is allowed using remove() method.	-   Deletion of elements is allowed.
+
+It throws ConcurrentModificationException on doing addition operation. Hence, addition is not allowed. 	-   Addition of elements is allowed.
+
+In iterator, we can't access the index of the traversed element.	-   In listIterator, we have nextIndex() and previousIndex() methods for accessing the indexes of the traversed or the next traversing element.
+
+Modification of any element is not allowed.	-   Modification is allowed.
