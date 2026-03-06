@@ -1,0 +1,128 @@
+The Enumeration interface in Java is one of the legacy interfaces used to iterate over elements of collections such as Stack, Vector and HashTable. It was introduced in JDK 1.0 and is part of the java.util package
+
+It is a legacy cursor used before Iterator and ListIterator.
+It supports only forward direction traversal (one-way).
+Enumeration isn’t fail-fast, but Vector and Hashtable are, so modifying them during Enumeration can still cause ConcurrentModificationException.
+Mostly used with Vector, Stack, and Hashtable classes.
+Declaration
+public interface Enumeration<E>
+
+Where E is the type of elements stored in a collection.
+
+Creating Enumeration Object
+Creating an Enumeration Object with the Vector class
+
+Vector v = new Vector();
+Enumeration e = v.elements();
+
+import java.util.*;
+
+public class GFG{
+
+    public static void main(String[] args){
+
+        Vector<String> fruits = new Vector<>();
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Cherry");
+
+        // Getting Enumeration object
+        Enumeration<String> e = fruits.elements();
+
+        System.out.println("Elements of Vector:");
+        while (e.hasMoreElements()) {
+            System.out.println(e.nextElement());
+        }
+    }
+}
+
+
+Output
+Elements of Vector:
+Apple
+Banana
+Cherry
+
+Explanation
+
+-The elements() method of the Vector class returns an Enumeration of the vector’s elements.
+-The hasMoreElements() method checks if more elements exist in the collection.
+-The nextElement() method retrieves the next element and advances the cursor.
+-The iteration continues until all elements are processed.
+
+Methods of Enumeration Interface
+
+-asIterator(): This method returns an Iterator which traverses all the remaining elements covered by this enumeration.
+
+-hasMoreElements(): It returns a boolean indicating whether more elements remain; returns false when all elements are traversed.
+
+-nextElement(): It returns the next element in the enumeration sequence
+
+Example: Using Enumeration with Hashtable
+
+
+
+
+import java.util.*;
+​
+public class GFG{
+
+    public static void main(String[] args){
+
+        Hashtable<Integer, String> map = new Hashtable<>();
+        map.put(1, "Java");
+        map.put(2, "Python");
+        map.put(3, "C++");
+​
+        Enumeration<Integer> keys = map.keys();
+​
+        System.out.println("Hashtable Keys:");
+        while (keys.hasMoreElements()) {
+            int key = keys.nextElement();
+            System.out.println(key + " -> " + map.get(key));
+        }
+    }
+}
+
+Output
+Hashtable Keys:
+3 -> C++
+2 -> Python
+1 -> Java
+
+Working of Enumeration
+
+Step 1: Before Iteration
+-The cursor lies before the first element.
+-hasMoreElements() -> returns true (next element exists).
+-Calling nextElement() returns "Apple" and moves the cursor forward.
+
+Step 2: After Fetching “Apple”
+-Cursor lies between Apple and Banana.
+-hasMoreElements() -> returns true.
+-Calling nextElement() returns "Banana" and moves cursor forward.
+
+Step 3: After Fetching “Banana”
+-Cursor lies between Banana and Cherry.
+-hasMoreElements() -> returns true.
+-Calling nextElement() returns "Cherry" and moves cursor after the last element.
+
+Step 4: After Fetching “Cherry”
+-Cursor lies after the last element.
+-hasMoreElements() -> returns false. Iteration ends.
+
+
+Enumeration vs Iterator
+
+Feature 	-   Enumeration	    -   Iterator
+Package	-   java.util (Legacy, before JDK 1.2)	-   java.util (Introduced in JDK 1.2)
+
+Interface Methods	-   hasMoreElements(), nextElement()    -	hasNext(), next(), remove()
+
+Traversal Direction -	Only forward	-   Only forward (ListIterator supports both)
+
+Modification During Traversal   -	Not allowed (read-only) -	Allowed using remove()
+
+Fail-Fast Behavior	-   No (fail-safe)	-   Yes (throws ConcurrentModificationException)
+
+Return Type	-   Works with legacy classes like Vector, Hashtable    -	Works with all Collection types
